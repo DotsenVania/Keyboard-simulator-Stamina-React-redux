@@ -1,0 +1,125 @@
+.keyboard {
+
+    .row {
+        display: flex;
+        .key {
+            background-color: rgb(211, 209, 190);
+            cursor: pointer; 
+            padding: 20px;
+            width: 23px;
+            height: 23px;
+            margin:  3px; 
+            font-size: 18px; 
+            border-radius: 5px;
+            font-weight: 500;
+            border: 1px solid rgba(0, 0, 0, 0.116); 
+            transition: all ease 0.2s;
+            @media (max-width: 1200px) {
+                padding: calc(5px + (20 - 5) * ((100vw - 320px) / (1600 - 320))); ; 
+                width: calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320))); 
+                height: calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320))); ;
+                margin:  calc(1px + (3 - 1) * ((100vw - 320px) / (1600 - 320)));
+                font-size:calc(5px + (18 - 5) * ((100vw - 320px) / (1200 - 320))); 
+            }
+            &:hover {
+                background-color: #242424a9;
+            }
+            &.dark {
+                background-color: #1D3C43;
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+        .k_Space {
+            width: 400px;
+            margin: 0 auto;
+            @media (max-width: 1200px) {
+                width: calc(100px + (400 - 100) * ((100vw - 320px) / (1600 - 320))); 
+                
+            }
+        }
+        .k_CapsLock {
+            width: 92px;
+            @media (max-width: 1200px) {
+                width: calc(30px + (92 - 30) * ((100vw - 320px) / (1600 - 320)));
+                
+            }
+        }
+        .k_backspace {
+            width: 120px;
+            @media (max-width: 1200px) {
+                width: calc(27px + (120 - 30) * ((100vw - 320px) / (1600 - 320)));
+                
+            }
+        }
+        .k_Tab {
+            width: 80px;
+            @media (max-width: 1200px) {
+                width: calc(23px + (80 - 30) * ((100vw - 320px) / (1600 - 320))); 
+                
+            }
+        }
+        .k_Enter {
+            width: 100px;
+            @media (max-width: 1200px) {
+                width:  calc(27px + (100 - 30) * ((100vw - 320px) / (1600 - 320)));
+                
+            }
+        }
+        .k_Shift {
+            width: 127px;
+            @media (max-width: 1200px) {
+                width: calc(40px + (127 - 20) * ((100vw - 320px) / (1600 - 320)));
+                
+            }
+        }
+        .k_1, .k_2, .k_q, .k_a, .k_z, .k_\!, .k_\@, .k_Q, .k_A, .k_Z,     .k_0, .k_p, .k_-, .k_\=, .k_\[, .k_\], .k_\\, .k_\;, .k_\', .k_\/, .k_\_, .k_\+, .k_\{, .k_\}, .k_\:, .k_\", .k_\?, .k_\){
+            background-color: rgb(144, 235, 116);
+            &.dark {
+                background-color: rgba(144, 235, 116, 0.650);
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+        .k_3, .k_w, .k_s, .k_x, .k_\#, .k_W, .k_S, .k_X, .k_9, .k_o, .k_l, .k_\., .k_\(, .k_O, .k_L, .k_\> {
+            background-color: rgb(119, 194, 245);
+            &.dark {
+                background-color: rgba(119, 194, 245, 0.650);
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+        .k_4, .k_e, .k_d, .k_c, .k_\$, .k_E, .k_D, .k_C, .k_8, .k_i, .k_k, .k_\,, .k_\*, .k_I, .k_K, .k_\< {
+            background-color: rgb(252, 147, 246);
+            &.dark {
+                background-color: rgba(252, 147, 246, 0.650);
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+
+        .k_5, .k_6, .k_r, .k_t, .k_f, .k_g, .k_v, .k_b, .k_\%, .k_\^, .k_R, .k_T, .k_F, .k_G, .k_V, .k_B {
+            background-color: rgb(255, 213, 157);
+            &.dark {
+                background-color: rgba(255, 213, 157, 0.650);
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+        .k_7, .k_y, .k_u, .k_h, .k_j, .k_n, .k_m, .k_\&, .k_Y, .k_U, .k_H, .k_J, .k_N, .k_M {
+            background-color: rgb(243, 255, 137);
+            &.dark {
+                background-color: rgba(243, 255, 137, 0.650);
+                &:hover {
+                    background-color: #2A4930;
+                }
+            }
+        }
+        
+    }
+}

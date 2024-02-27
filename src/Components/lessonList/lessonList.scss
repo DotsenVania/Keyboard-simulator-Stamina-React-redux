@@ -1,0 +1,28 @@
+.lesson{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
+    &__grupe {
+        font-weight: 900;
+        text-align: center;
+        padding: 30px 60px 30px 60px;
+        margin: 10px; 
+        font-size: 30px;
+        background-color: #D1E6D5;
+        transition: all ease .3s; 
+        &:hover {
+            background-color: rgb(180, 202, 149);
+
+        }
+        &.dark {
+            background-color: #1D3C43;
+            &:hover {
+                background-color: #2A4930;
+    
+            }
+        }
+    }
+    
+}

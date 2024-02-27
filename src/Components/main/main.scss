@@ -1,0 +1,30 @@
+.main{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    overflow: hidden; 
+    &__wrapper {
+        width: 100%;  
+        display: flex;
+        // justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        .lesson{ 
+            &__grupe {
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;  
+                &_img {
+                    margin-right: 10px;
+                }
+                
+            }
+        }
+    }
+    &__title {
+        font-size: 49px;
+        margin: 15px;
+
+    }
+}
