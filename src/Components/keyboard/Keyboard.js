@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 
 function Keyboard (props) {
-    const [checkCase, setCheckCase] = useState(false); // Перевірка регістру якщо true - то верхній регістр
+    const [checkCase, setCheckCase] = useState(false); // Case check if true - then upper case
     const {darcTheme} = useSelector(state => state.stamina); 
     const darkClass = darcTheme ? 'dark' : ''; 
     const keyData = {
@@ -17,7 +17,7 @@ function Keyboard (props) {
         row4: ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 'Shift'],
         row4Uper: ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', 'Shift'],
         row5: ['Space'],
-    }; // Масив букв і символів для клавіатури...
+    }; // An array of letters and symbols for the keyboard...
 
     const {row1, row1Uper, row2, row2Uper, row3, row3Uper, row4, row4Uper, row5} = keyData;
 
@@ -36,13 +36,13 @@ function Keyboard (props) {
     }, [props.enabledShift])
 
 
-    function keyRender(keyArr) { // Рендер клавіш клавіатури...
+    function keyRender(keyArr) { // Keyboard key rendering...
         
         const row = keyArr.map((key, i) => {
-            let styles; // Перемінна для стилізації кнопок
+            let styles; // Button styling variable
             let errorLetter = checkCase ? props.letterError.toUpperCase() : props.letterError;
 
-            if(errorLetter ===  key) { // Якщо буква невірна 
+            if(errorLetter ===  key) { // If the letter is incorrect
                 styles = {
                     backgroundColor: 'red'
                 }
@@ -50,12 +50,12 @@ function Keyboard (props) {
                 styles = {}
             } 
             
-            if(props.letter === key) { // Якщо буква вірна
+            if(props.letter === key) { // If the letter is correct
                 styles = {
                     backgroundColor: '#242424a9',
                     color: 'white'
                 }
-            }else if (props.letter === ' ') { // Якщо приходить пробіл
+            }else if (props.letter === ' ') { // If a space comes
                 if(key === 'Space') {
                     styles = {
                         backgroundColor: '#242424a9',
@@ -64,7 +64,7 @@ function Keyboard (props) {
                 }
             }
 
-            if(key === 'Shift') { // Стилі для Shift якщо буква в верхньому регістрі
+            if(key === 'Shift') { // Styles for Shift if the letter is uppercase
                 if (checkCase) {
                     styles = {
                         backgroundColor: '#242424a9',

@@ -8,19 +8,19 @@ import { setActivePage,  setStringForLesson} from '../../features/counter/counte
 import { usePreparationString } from '../../hooks/usePreparationString';
 
 function LessonList () {
-    const {currentLessons, darcTheme} = useSelector(state => state.stamina);  // Достаю дані з уроками 
+    const {currentLessons, darcTheme} = useSelector(state => state.stamina);  // I get data with lessons
     const darkClass = darcTheme ? 'dark' : ''; 
-    const {transformDataInString} = usePreparationString(); // Достаю функцію для трансформації даних в строку
+    const {transformDataInString} = usePreparationString(); // I get a function for transforming data into a string
     const dispatch = useDispatch();
 
-    // Вигрузка необхідних для уроку даних і перехід на сторінку з тринажером ********************************
+    // Downloading the data necessary for the lesson and switching to the simulator page ********************************
     const nextLesson = (id) => {
         dispatch(setActivePage('pageLesson'));
         dispatch(setStringForLesson(transformDataInString(id)));
     }
     //********************************************************************************************************
 
-    // Рендер списку Уроків і кнопкою для переходу до окремого уроку *****************************************
+    //Rendering of the list of Lessons and a button to jump to a separate lesson *****************************************
     const lessons = currentLessons.map((lesson, i) => {
         return (
                 <div key={i} onClick={() => nextLesson(i)} className={`lesson__grupe ${darkClass}`}>{lesson.nameLesson}</div>

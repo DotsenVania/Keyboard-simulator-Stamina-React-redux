@@ -19,14 +19,14 @@ function Main () {
 
     const dispatch = useDispatch()
 
-    // Вигрузка необхідних даних і перехід на слідуючу сторінку  **************************
+    // Downloading the necessary data and moving to the next page  **************************
     function nextLessons(id) {
         dispatch(setActivePage('pageLessons')); // Строка активної сторінки для reducer
         dispatch(setDataLessons(transformData(id)))
     }
     //*************************************************************************************
 
-    //Рендер груп програмування для уроків/************************************************
+    //Rendering of programming groups for lessons************************************************
     const group = lessonData.map((group, i) => {
         let className; 
         switch (group.nameGrup) {
@@ -57,7 +57,7 @@ function Main () {
     })
     //***********************************************************************************
 
-    // Динамічний заголовок відповідно до активної сторінки *****************************
+    // Dynamic header according to the active page*****************************
     const setTitles = () => {
         let title = 'Frontend'
         if(pageGrup) {
@@ -73,7 +73,7 @@ function Main () {
    let title = setTitles(); 
    //*************************************************************************************
 
-   //Умовний рендиринг компонентів********************************************************
+   //Conditional rendering of components********************************************************
     const groupsContent = pageGrup ? ( <div className="lesson">{group}</div>) : null
     const lessonsContent = pageLessons ? <LessonList/> : null
     const lessonContent = pageLesson ? <MainCurrentExercise/> : null

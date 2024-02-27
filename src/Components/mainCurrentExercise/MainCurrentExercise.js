@@ -15,27 +15,27 @@ import { setStringForLesson, finalLessonStatus, results } from '../../features/c
 
 export default function MainCurrentExercise() {
     const {transformDataInString} = usePreparationString(); 
-    const {stringForLesson, currentLessons, idData, finalLesoon, darcTheme} = useSelector(state => state.stamina); //Строка для уроку
+    const {stringForLesson, currentLessons, idData, finalLesoon, darcTheme} = useSelector(state => state.stamina); //Data for the lesson
     const darkClass = darcTheme ? 'dark' : ''; 
 
-    const [str, setStr] = useState([]); //Масив букв для уроку
-    const [sizes, setSizes] = useState([]) // Масив розмірів ширини кожної букви
-    const [numLetter, setNumLetter] = useState(0); // нумерація для масива
-    const [sumSize, setSumSize] = useState(0); //Сума відступу для тексту
+    const [str, setStr] = useState([]); //An array of letters for the lesson
+    const [sizes, setSizes] = useState([]) // An array of width sizes for each letter
+    const [numLetter, setNumLetter] = useState(0); // Numbering for the array
+    const [sumSize, setSumSize] = useState(0); //The amount of indentation for the text
     const [sumError, setSumError] = useState(0);
-    const [errorStyle, setErrorStyle] = useState(false); // Для оформлення помилки
-    const [numArrMethods, setNumArrMethods] = useState(0); //Рахунок для масива методів (масив з кількістю символів) 
-    const [currentArrMethods, setCurentArrMethods] = useState(0); //Рахунок для порівняння з числом в масиві  
-    const [letterError, setLetterError] = useState(''); // Невірно введена буква
-    const [newText, setNewText] = useState(false); // Статус прогрузки тексту для нового уроку
-    const [enabledShift, setEnabledShift] = useState(false); // Статус клавіші Shift  нажата / не нажата
-    const [statusFocus, setStatusFocus] = useState(false); // Статус фокуса на уроці
-    const [statusTime, setStatusTime] = useState('fullStop') // Строка статусу секундоміра
-    const [progres, setProgres] = useState(0); // Ширина лінії прогресу в процентах
-    const [trueClickCounter, setTrueClickCounter] = useState(0); // Лічильник всіх вірних натискань для підрахунку швидкості
-    const [infoMethod, setInfoMethod] = useState({}); // Запис даних про метод
-    const [idMethodForModal, setIdMethodForModal] = useState(0); // id для модального вікна з детальним описом метода
-    const [modalDescrActive, setModalDescrActive] = useState(false); // Показ модального вікна
+    const [errorStyle, setErrorStyle] = useState(false); // Styles for errors
+    const [numArrMethods, setNumArrMethods] = useState(0); //Account for method array (array with number of characters)
+    const [currentArrMethods, setCurentArrMethods] = useState(0); //count to compare with the number in the array  
+    const [letterError, setLetterError] = useState(''); // Incorrectly entered letter
+    const [newText, setNewText] = useState(false); // Text loading status for a new lesson
+    const [enabledShift, setEnabledShift] = useState(false); // The status of the Shift key is pressed / not pressed
+    const [statusFocus, setStatusFocus] = useState(false); // Focus status in the lesson
+    const [statusTime, setStatusTime] = useState('fullStop') // Stopwatch status bar
+    const [progres, setProgres] = useState(0); // The width of the progress line in percent
+    const [trueClickCounter, setTrueClickCounter] = useState(0); // Counter of all valid clicks to count speed
+    const [infoMethod, setInfoMethod] = useState({}); 
+    const [idMethodForModal, setIdMethodForModal] = useState(0); // id for the modal window with a detailed description of the method
+    const [modalDescrActive, setModalDescrActive] = useState(false); // Show modal window
 
     const dispatch = useDispatch(); 
     const focus = useRef(); 
@@ -47,7 +47,7 @@ export default function MainCurrentExercise() {
        }
     }, [numLetter, str])
 
-    //Строка в масив ***************************************************************************
+    //String to array ***************************************************************************
     function transformStrInArray() {
         setStr(stringForLesson.string.split(''));
         setNewText(true)
@@ -58,7 +58,7 @@ export default function MainCurrentExercise() {
     }, [stringForLesson]);
     //******************************************************************************************
 
-    //Кожну букву масива в окремий компонент ***************************************************
+    //Each letter of the array into a separate component ***************************************************
     function letterOutput() {
         let size = (size) => {
             setSizes(state => [...state, size])
@@ -73,7 +73,7 @@ export default function MainCurrentExercise() {
 
     //******************************************************************************************
 
-    // Підрахунок відстанні зрушення тексту і активної букви з масиву***************************
+    // Calculation of the distance shift of the text and the active letter from the array ***************************
     function biasInLeft(e) {
         if(str[numLetter] === e.key) {
             setNumLetter(state => state + 1)
@@ -109,7 +109,7 @@ export default function MainCurrentExercise() {
      //******************************************************************************************
 
      
-    //Скидання зрушення тексту і активної букви**************************************************
+    //Resetting the offset of the text and the active letter**************************************************
     function beckLesson() {
         setNumLetter(state => 0);
         setSumSize(state => 0);
@@ -123,7 +123,7 @@ export default function MainCurrentExercise() {
     }
     //******************************************************************************************
 
-    //Добавлення і стилізація методів які використовуються в уроці *****************************
+    //Adding and stylizing the methods used in the lesson *****************************
 
     function metodsInLesson() {
         const methods = currentLessons[stringForLesson.id].words.map((method, i) => {
@@ -144,7 +144,7 @@ export default function MainCurrentExercise() {
         })
     //******************************************************************************************
     
-    //Добавлення опису метода ******************************************************************
+    //Adding method description ******************************************************************
         const description = currentLessons[stringForLesson.id].words.map((method, i) => {
             if(numArrMethods === i) {
                 return (
@@ -162,7 +162,7 @@ export default function MainCurrentExercise() {
 
 
     //******************************************************************************************
-    //Функції для кнопок які переключаються між уроками ****************************************
+    //Functions for buttons that switch between lessons ****************************************
     function next() {
         const id = idData.idLessons;
         if(id !== currentLessons.length - 1) {
@@ -247,14 +247,14 @@ export default function MainCurrentExercise() {
     )
 }
 
-//Компонент букви*******************************************************************************************************
+//Letter component*******************************************************************************************************
 function Letter (props) {
     const size = useRef();
 
-    //Добавляю відступи між словами ************************************************************************************
+    //I add indents between words ************************************************************************************
     let style = props.letter == " " ? {width: "10px"}: null;
     //******************************************************************************************************************
-    // Записую в стейт ширину кожної букви******************************************************************************
+    // I write the width of each letter in the state ******************************************************************************
     useEffect(() => {
         props.size( getComputedStyle(size.current).width.replace(/px/, '') )
     },[props.letter])

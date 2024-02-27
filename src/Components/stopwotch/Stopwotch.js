@@ -3,13 +3,13 @@ import {useDispatch, useSelector} from 'react-redux';
 import {results} from '../../features/counter/counterSlice'; 
 
 function Stopwotch(props) {
-    const [hour, setHour] = useState(0);//Лічильник годин
-    const [minute, setMinute] = useState(0);//Лічильник минут
-    const [second, setSeconsd] = useState(0); // Лічильник секунд
-    const [intervalId, setIntervaId] = useState(null); // Посилання на інтервал
-    const [styles, setStules] = useState({}); // Стилі для секундоміра
-    const [allSecond, setAllSecond] = useState(0); // Загальна кількість секунд
-    const [speed, setSpeed] = useState(0); // Результат обчислення швидкості
+    const [hour, setHour] = useState(0);//Hour meter
+    const [minute, setMinute] = useState(0);//Minute counter
+    const [second, setSeconsd] = useState(0); // Seconds counter
+    const [intervalId, setIntervaId] = useState(null); // Reference interval
+    const [styles, setStules] = useState({}); // Stopwatch styles
+    const [allSecond, setAllSecond] = useState(0); // Total seconds
+    const [speed, setSpeed] = useState(0); // The result of the speed calculation
     
     const dispatch = useDispatch();
     const {resultsLesson, finalLesoon, darcTheme} = useSelector(state => state.stamina); 
