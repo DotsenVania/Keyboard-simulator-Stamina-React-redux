@@ -1,90 +1,160 @@
 [
-    {
-        "nameGrup": "HTML",
-        "idGroup": "0",
-        "lessons": [
-            {
-                "nameLesson": "lesson 1",
-                "words":  [
-                    
-                ],
-                "lessonID": "0"
-            }
-        ]
-    },
-    {
-        "nameGrup": "CSS",
-        "idGroup": "1",
-        "lessons": [
-            {
-                "nameLesson": "lesson 1",
-                "words":  [
-
-                ],
-                "lessonID": "0"
-            }
-        ]
-    },
-    {
-        "nameGrup": "JS",
-        "idGroup": "2",
-        "lessons": [
-            {
-                "nameLesson": "lesson 1",
-                "words": [
-                    {
-                        "name": "map",
-                        "description": "Метод map() создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-                    },
-                    {
-                        "name":"filter",
-                        "description": "Метод filter() создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
-                    },
-                    {
-                        "name": "fill",
-                        "description": "Метод fill() заполняет все элементы массива от начального до конечного индексов одним значением.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"
-                    },
-                    {
-                        "name": "find",
-                        "description": "Метод find() возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции. В противном случае возвращается undefined.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
-                    },
-                    {
-                        "name": "indexOf",
-                        "description": "Метод indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
-                    }
-                ],
-                "lessonID": "0"
-            },
-            {
-                "nameLesson": "lesson 2",
-                "words": [
-                    {
-                        "name": "f",
-                        "description": " результатом вызова указанной функции для каждого элемента массива.",
-                        "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
-                    }
-                ],
-                "lessonID": "0"
-            }
-        ]
-    },
-    {
-        "nameGrup": "REACT",
-        "idGroup": "3",
-        "lessons" : [
-            {
-                "words": [
-
-                ],
-                "lessonID": "0"
-            }
-        ]
-    }
-    
-    
+  {
+    "nameGrup": "HTML",
+    "idGroup": "0",
+    "lessons": [
+      {
+        "nameLesson": "lesson 1",
+        "words": [
+          {
+            "name": "html",
+            "description": "Тег HTML - це елемент мови розмітки, який визначає структуру та вигляд веб-сторінки за допомогою імені тега в <>, може містити атрибути. Є блочними або вбудованими. Наприклад, <div> - блочний для групування, <span> - вбудований для обгортання тексту.",
+            "url": "https://css.in.ua/html/tag/html"
+          },
+          {
+            "name": "head",
+            "description": "HTML теґ <head> призначений для зберігання інших елементів, мета яких - допомогти браузеру в роботі з даними.",
+            "url": "https://css.in.ua/html/tag/head"
+          },
+          {
+            "name": "body",
+            "description": "HTML тег <body> призначений для зберігання тіла веб-сторінки (його контенту), що відображається у вікні браузера.",
+            "url": "https://css.in.ua/html/tag/body"
+          },
+          {
+            "name": "header",
+            "description": "Тег <header> призначений для того, щоб позначити розділ HTML-сторінки як заголовок (контейнер для вступного вмісту) або набір навігаційних посилань.",
+            "url": "https://css.in.ua/html/tag/header"
+          },
+          {
+            "name": "section",
+            "description": "Елемент <section> являє собою універсальний розділ документа. Групує тематичне вміст і зазвичай містить заголовок.",
+            "url": "https://css.in.ua/html/tag/section"
+          }
+        ],
+        "lessonID": "0"
+      }
+    ]
+  },
+  {
+    "nameGrup": "CSS",
+    "idGroup": "1",
+    "lessons": [
+      {
+        "nameLesson": "lesson 1",
+        "words": [
+          {
+            "name": "display",
+            "description": "Властивість display вказує тип блока, який використовується для HTML-елемента.",
+            "url": "https://css.in.ua/css/property/display"
+          },
+          {
+            "name": "position",
+            "description": "Властивість position визначає тип позиціювання відносно вікна браузера або інших елементів: static, relative, absolute, fixed або sticky (статичний, відносний, абсолютний, фіксований або клейкий).",
+            "url": "https://css.in.ua/css/property/position"
+          },
+          {
+            "name": "background",
+            "description": "Властивість background задає колір тла, або його зображення.",
+            "url": "https://css.in.ua/css/property/background"
+          },
+          {
+            "name": "color",
+            "description": "Властивість color задає колір тексту та його оздоблення, котре задане за допомогою властивості text-decoration.",
+            "url": "https://css.in.ua/css/property/color"
+          },
+          {
+            "name": "border",
+            "description": "Властивість border - універсальна властивість і дозволяє одночасно задати значення таким властивостям як: border-width border-style border-color",
+            "url": "https://css.in.ua/css/property/border"
+          }
+        ],
+        "lessonID": "0"
+      }
+    ]
+  },
+  {
+    "nameGrup": "JS",
+    "idGroup": "2",
+    "lessons": [
+      {
+        "nameLesson": "lesson 1",
+        "words": [
+          {
+            "name": "map",
+            "description": "Метод map() создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+          },
+          {
+            "name": "filter",
+            "description": "Метод filter() создаёт новый массив со всеми элементами, прошедшими проверку, задаваемую в передаваемой функции.",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+          },
+          {
+            "name": "fill",
+            "description": "Метод fill() заполняет все элементы массива от начального до конечного индексов одним значением.",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"
+          },
+          {
+            "name": "find",
+            "description": "Метод find() возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию переданному в callback функции. В противном случае возвращается undefined.",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find"
+          },
+          {
+            "name": "indexOf",
+            "description": "Метод indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"
+          }
+        ],
+        "lessonID": "0"
+      },
+      {
+        "nameLesson": "lesson 2",
+        "words": [
+          {
+            "name": "f",
+            "description": " ",
+            "url": "https://developer.mozilla.org/"
+          }
+        ],
+        "lessonID": "0"
+      }
+    ]
+  },
+  {
+    "nameGrup": "REACT",
+    "idGroup": "3",
+    "lessons": [
+      {
+        "words": [
+          {
+            "name": "useState",
+            "description": " ",
+            "url": "https://uk.legacy.reactjs.org/docs/hooks-reference.html"
+          },
+          {
+            "name": "useEffect",
+            "description": " ",
+            "url": "https://uk.legacy.reactjs.org/docs/hooks-reference.html"
+          },
+          {
+            "name": "useContext",
+            "description": " ",
+            "url": "https://uk.legacy.reactjs.org/docs/hooks-reference.html"
+          },
+          {
+            "name": "useCallback",
+            "description": " ",
+            "url": "https://uk.legacy.reactjs.org/docs/hooks-reference.html"
+          },
+          {
+            "name": "useRef",
+            "description": " ",
+            "url": "https://uk.legacy.reactjs.org/docs/hooks-reference.html"
+          }
+        ],
+        "lessonID": "0"
+      }
+    ]
+  }
 ]
